@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冰火熊猫大冒险无敌版 - 欢迎来到《冰火熊猫大冒险无敌版》游戏专题页面。提供最新版本下载、详细攻略技巧、角色技能解析及游戏评测。体验双属性切换带来的独特玩法，享受无限金币与无敌状态带来的畅快战斗体验。">
+    <meta name="keywords" content="冰火熊猫大冒险无敌版, 冰火熊猫, 网页游戏, 攻略, 无敌版, 下载">
+    <title>冰火熊猫大冒险无敌版 - 畅快双属性战斗与无敌攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-fire: #ff6b35;
+            --primary-ice: #00bcd4;
+            --bg-dark: #1a1a2e;
+            --bg-card: #16213e;
+            --text-main: #eaeaea;
+            --text-muted: #a0a0a0;
+            --border-radius: 12px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(26, 26, 46, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-fire), var(--primary-ice));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a:hover {
+            color: var(--primary-fire);
+        }
+
+        .btn-download {
+            background: linear-gradient(90deg, var(--primary-fire), #ff8c61);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+            background: radial-gradient(circle at center, #2a2a4e 0%, var(--bg-dark) 70%);
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 .fire {
+            color: var(--primary-fire);
+        }
+
+        .hero h1 .ice {
+            color: var(--primary-ice);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-fire);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px var(--spacing-unit);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-fire), var(--primary-ice));
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Game Info / Stats */
+        .game-info {
+            background-color: #0f3460;
+            padding: 60px var(--spacing-unit);
+        }
+
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .info-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .info-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .stat-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+        }
+
+        .stat-value {
+            font-weight: bold;
+        }
+
+        .fire-text { color: var(--primary-fire); }
+        .ice-text { color: var(--primary-ice); }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 60px var(--spacing-unit);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .guide-item {
+            position: relative;
+            height: 200px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .guide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .guide-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .guide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 20px;
+        }
+
+        .guide-overlay h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .guide-overlay span {
+            font-size: 0.8rem;
+            color: var(--primary-fire);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-card);
+            padding: 60px var(--spacing-unit);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-muted);
+            display: none;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary-ice);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-fire);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f0f1a;
+            padding: 40px var(--spacing-unit);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .info-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <span>🐼 冰火熊猫</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#features">游戏特色</a></li>
+                <li><a href="#guide">攻略指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-download">立即下载</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>冰火熊猫大冒险 <span class="fire">无敌版</span></h1>
+            <p>体验双属性切换的极致快感，开启无限金币与无敌挑战。经典横版过关，带你重温童年热血战斗。</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="showToast('正在为您跳转下载页面...')">开始游戏</button>
+                <button class="btn btn-secondary" onclick="showToast('已添加到收藏夹')">收藏本页</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">无敌版特色</h2>
+        <div class="feature-grid">
+            <article class="feature-card">
+                <span class="feature-icon">🔥</span>
+                <h3>火属性技能</h3>
+                <p>释放强大的火焰攻击，对冰属性敌人造成额外伤害。在无敌版中，火焰技能更加持久，伤害输出翻倍。</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-icon">❄️</span>
+                <h3>冰属性技能</h3>
+                <p>冻结敌人行动，创造绝佳的进攻机会。无敌版模式下，冰霜护盾可抵挡所有普通攻击，安全闯关。</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-icon">💎</span>
+                <h3>无限金币</h3>
+                <p>无需辛苦收集，开启游戏即拥有海量金币。用于购买强力道具、升级装备，让您的熊猫战力爆表。</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-icon">🛡️</span>
+                <h3>一击必杀</h3>
+                <p>拥有无敌属性，轻松应对高难度关卡。无需走位，无需躲避，尽情享受砍怪通关的解压快感。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Game Info Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-text">
+                <h2>游戏简介</h2>
+                <p>《冰火熊猫》是一款经典的横版动作冒险游戏。在“无敌版”中，玩家将扮演一只拥有火与冰双重属性的熊猫，穿梭于神秘的森林与古老的遗迹之中，挑战强大的BOSS。</p>
+                <p>游戏的核心玩法在于“冰火转换”。玩家需要根据敌人的属性和关卡环境，灵活切换火焰与冰霜状态。火属性擅长近战爆发，冰属性擅长远程控制与防御。配合无敌版带来的资源优势，玩家可以探索更多隐藏关卡和彩蛋。</p>
+            </div>
+            <div class="info-stats">
+                <ul class="stat-list">
+                    <li>
+                        <span class="stat-label">游戏类型</span>
+                        <span class="stat-value">动作冒险</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">操作方式</span>
+                        <span class="stat-value">键盘 / 鼠标</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">核心机制</span>
+                        <span class="stat-value fire-text">双属性切换</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">无敌版特性</span>
+                        <span class="stat-value ice-text">生命无限 / 金币满</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">推荐设备</span>
+                        <span class="stat-value">PC / 手机浏览器</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="guide" class="guide-section">
+        <h2 class="section-title">新手攻略</h2>
+        <div class="guide-grid">
+            <div class="guide-item">
+                <img src="https://picsum.photos/seed/fire/400/300" alt="火属性使用技巧">
+                <div class="guide-overlay">
+                    <h4>火属性使用技巧</h4>
+                    <span>点击阅读</span>
+                </div>
+            </div>
+            <div class="guide-item">
+                <img src="https://picsum.photos/seed/ice/400/300" alt="冰属性防御指南">
+                <div class="guide-overlay">
+                    <h4>冰属性防御指南</h4>
+                    <span>点击阅读</span>
+                </div>
+            </div>
+            <div class="guide-item">
+                <img src="https://picsum.photos/seed/boss/400/300" alt="BOSS战技巧">
+                <div class="guide-overlay">
+                    <h4>BOSS战技巧</h4>
+                    <span>点击阅读</span>
+                </div>
+            </div>
+            <div class="guide-item">
+                <img src="https://picsum.photos/seed/secret/400/300" alt="隐藏关卡揭秘">
+                <div class="guide-overlay">
+                    <h4>隐藏关卡揭秘</h4>
+                    <span>点击阅读</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <h2 class="section-title">常见问题</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">无敌版会破坏游戏平衡性吗？</div>
+                <div class="faq-answer">
+                    无敌版主要是为了满足玩家在通关或挑战高难度关卡时的娱乐需求。它移除了生命值限制和金币获取的繁琐过程，让您能更专注于体验剧情和欣赏画面，属于一种辅助游玩模式。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何切换火与冰属性？</div>
+                <div class="faq-answer">
+                    在游戏中，通过按下特定的快捷键（通常是数字键1或2）即可在火属性和冰属性之间切换。切换后，熊猫的外观颜色和攻击特效会随之改变，请根据当前敌人的属性选择合适的形态。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">下载后如何开始游戏？</div>
+                <div class="faq-answer">
+                    下载安装包后，直接运行游戏启动程序。在主菜单中选择“开始游戏”，即可进入无敌版模式。部分版本可能需要联网验证，但通常支持离线游玩。
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2023 冰火熊猫大冒险无敌版专题页 - 游戏资源分享平台</p>
+    <p>本站仅提供游戏资讯与攻略分享，游戏版权归原开发团队所有。</p>
+</footer>
+
+<script>
+    // 简单的FAQ折叠逻辑
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+
+    // 模拟下载反馈
+    function showToast(message) {
+        // 创建一个临时的toast元素
+        const toast = document.createElement('div');
+        toast.textContent = message;
+        toast.style.position = 'fixed';
+        toast.style.bottom = '20px';
+        toast.style.left = '50%';
+        toast.style.transform = 'translateX(-50%)';
+        toast.style.backgroundColor = 'rgba(255, 107, 53, 0.9)';
+        toast.style.color = 'white';
+        toast.style.padding = '12px 24px';
+        toast.style.borderRadius = '30px';
+        toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+        toast.style.zIndex = '2000';
+        toast.style.animation = 'fadeInOut 3s forwards';
+        
+        // 添加简单的动画样式
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fadeInOut {
+                0% { opacity: 0; transform: translate(-50%, 20px); }
+                10% { opacity: 1; transform: translate(-50%, 0); }
+                90% { opacity: 1; transform: translate(-50%, 0); }
+                100% { opacity: 0; transform: translate(-50%, -20px); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        document.body.appendChild(toast);
+        
+        // 3秒后移除
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
