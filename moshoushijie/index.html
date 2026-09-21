@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="魔兽世界试玩帐号提供最新、安全、稳定的免费试玩账号资源。包含1-70级全职业账号、满级战网号、30天体验卡及升级攻略，帮助玩家快速体验艾泽拉斯大陆。">
+    <meta name="keywords" content="魔兽世界试玩帐号,魔兽世界免费账号,魔兽世界体验服,魔兽世界战网号">
+    <title>魔兽世界试玩帐号-免费体验艾泽拉斯大陆与升级攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0078d4;
+            --secondary-color: #004578;
+            --accent-color: #dcb159;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            color: var(--text-main);
+        }
+
+        /* Account Cards Grid */
+        .account-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .account-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e1e4e8;
+        }
+
+        .account-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header .level-badge {
+            background-color: var(--accent-color);
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .account-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .account-info div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-footer {
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-tag {
+            font-size: 1.2rem;
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        .price-tag::before {
+            content: '¥';
+            font-size: 0.9rem;
+        }
+
+        .btn-card {
+            background-color: #e1e4e8;
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-card:hover {
+            background-color: #d1d5db;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-item h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .guide-item p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .guide-steps {
+            counter-reset: step;
+        }
+
+        .guide-steps li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .guide-steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>WoW</span>账号中心
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">账号列表</a></li>
+                    <li><a href="#">战网号</a></li>
+                    <li><a href="#">升级攻略</a></li>
+                    <li><a href="#">安全须知</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">立即登录</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>魔兽世界试玩帐号</h1>
+            <p>无需购买CDK，提供最新、安全、稳定的免费及低价试玩账号资源。助您快速开启艾泽拉斯冒险，体验全职业特色。</p>
+            <div class="hero-tags">
+                <span>✓ 全职业解锁</span>
+                <span>✓ 满级直升</span>
+                <span>✓ 30天体验卡</span>
+                <span>✓ 客服在线</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 账号展示区 -->
+        <h2 class="section-title">热门试玩账号推荐</h2>
+        <div class="account-grid">
+            <!-- Card 1 -->
+            <article class="account-card">
+                <div class="card-header">
+                    <span>暴风城大区</span>
+                    <span class="level-badge">满级 70级</span>
+                </div>
+                <div class="card-body">
+                    <div class="account-info">
+                        <div>👤 职业: 圣骑士</div>
+                        <div>🛡️ 阵营: 联盟</div>
+                    </div>
+                    <div class="account-info">
+                        <div>📦 装备: 840+装备</div>
+                        <div>⏳ 剩余: 28天</div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">包含所有英雄职业及部分职业专精，坐骑齐全，适合体验团本和PVP。</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price-tag">0.01</span>
+                    <a href="#" class="btn-card">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="account-card">
+                <div class="card-header">
+                    <span>铁炉堡大区</span>
+                    <span class="level-badge">60级</span>
+                </div>
+                <div class="card-body">
+                    <div class="account-info">
+                        <div>👤 职业: 法师</div>
+                        <div>🛡️ 阵营: 联盟</div>
+                    </div>
+                    <div class="account-info">
+                        <div>📦 装备: 565装等</div>
+                        <div>⏳ 剩余: 15天</div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">经典60级怀旧体验，包含祖尔格拉布、黑上等经典副本钥匙，适合怀旧玩家。</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price-tag">0.50</span>
+                    <a href="#" class="btn-card">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="account-card">
+                <div class="card-header">
+                    <span>幽暗城大区</span>
+                    <span class="level-badge">1-70级</span>
+                </div>
+                <div class="card-body">
+                    <div class="account-info">
+                        <div>👤 职业: 德鲁伊</div>
+                        <div>🛡️ 阵营: 部落</div>
+                    </div>
+                    <div class="account-info">
+                        <div>📦 装备: 刚出新手村</div>
+                        <div>⏳ 剩余: 30天</div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">全新注册账号，从1级开始体验，适合想自己练小号或测试职业玩法的用户。</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price-tag">1.00</span>
+                    <a href="#" class="btn-card">查看详情</a>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="account-card">
+                <div class="card-header">
+                    <span>奥格瑞玛大区</span>
+                    <span class="level-badge">满级 70级</span>
+                </div>
+                <div class="card-body">
+                    <div class="account-info">
+                        <div>👤 职业: 战士</div>
+                        <div>🛡️ 阵营: 部落</div>
+                    </div>
+                    <div class="account-info">
+                        <div>📦 装备: 840+装备</div>
+                        <div>⏳ 剩余: 22天</div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">坐骑齐全，拥有史诗级坐骑，适合PVP和PVE体验，数据已备份。</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price-tag">0.01</span>
+                    <a href="#" class="btn-card">查看详情</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- 使用指南 -->
+        <h2 class="section-title">试玩账号使用指南</h2>
+        <div class="guide-section">
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <h3>什么是试玩帐号？</h3>
+                    <p>试玩帐号通常由官方或第三方提供，拥有一定时长的游戏体验时间（如30天、90天）或特定等级的体验角色。这类账号通常不绑定实名认证或绑定时间较短，是玩家体验游戏内容、尝试不同职业或测试账号安全性的重要途径。</p>
+                    <h3>账号安全注意事项</h3>
+                    <p>在使用第三方提供的试玩账号时，请务必注意账号安全。建议不要在账号内绑定个人银行卡或重要支付信息。建议使用独立的战网安全令牌，并定期修改账号密码。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>如何开始游戏？</h3>
+                    <ul class="guide-steps">
+                        <li>下载并安装《魔兽世界》客户端。</li>
+                        <li>打开战网客户端，选择“登录”。</li>
+                        <li>输入账号和密码（账号信息可在上方账号卡片中查看）。</li>
+                        <li>登录后进入游戏角色选择界面，选择试玩角色进行登录。</li>
+                        <li>开始你的冒险之旅。</li>
+                    </ul>
+                    <h3>常见问题 (FAQ)</h3>
+                    <p style="margin-top:10px;"><strong>Q: 试玩账号可以转服吗？</strong><br>A: 大部分试玩账号不支持转服功能，具体视账号类型而定。</p>
+                    <p><strong>Q: 账号过期后数据还在吗？</strong><br>A: 账号过期后角色数据通常会保留，但无法登录游戏，需续费或寻找新账号。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 账号类型分类 -->
+        <h2 class="section-title">账号类型分类</h2>
+        <div class="account-grid">
+            <article class="account-card" style="text-align: center; padding: 30px;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">⚔️</div>
+                <h3>1-70级体验号</h3>
+                <p style="color: #666; margin: 15px 0;">包含完整升级体验，适合想要从零开始感受剧情的玩家。</p>
+                <a href="#" class="btn-card">浏览列表</a>
+            </article>
+            <article class="account-card" style="text-align: center; padding: 30px;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🚀</div>
+                <h3>满级战网号</h3>
+                <p style="color: #666; margin: 15px 0;">直接拥有满级角色，装备成型，可立即体验团本或PVP。</p>
+                <a href="#" class="btn-card">浏览列表</a>
+            </article>
+            <article class="account-card" style="text-align: center; padding: 30px;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🎁</div>
+                <h3>CDK兑换码</h3>
+                <p style="color: #666; margin: 15px 0;">官方或活动赠送的兑换码，自行激活战网账号，拥有30天免费时间。</p>
+                <a href="#" class="btn-card">浏览列表</a>
+            </article>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-item">
+                <div class="faq-question">Q: 购买的试玩帐号支持手机绑定吗？</div>
+                <div class="faq-answer">A: 我们提供的账号多为未绑定个人手机或绑定时间较短的账号，以确保您的使用安全。建议您在登录后尽快自行绑定手机以防止找回。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 如果账号无法登录怎么办？</div>
+                <div class="faq-answer">A: 请首先检查输入的账号密码是否正确。如果确认无误但仍无法登录，请联系我们的在线客服，我们将为您处理。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 试玩帐号可以升级装备吗？</div>
+                <div class="faq-answer">A: 试玩帐号通常拥有一定的游戏时长，只要在有效期内，您可以通过做任务、打副本等方式正常升级装备。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站介绍</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">最新账号上架</a></li>
+                        <li><a href="#">战网充值</a></li>
+                        <li><a href="#">游戏攻略</a></li>
+                        <li><a href="#">账号安全中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏支持</h4>
+                    <ul>
+                        <li><a href="#">国服官网</a></li>
+                        <li><a href="#">暴雪客服</a></li>
+                        <li><a href="#">游戏论坛</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 魔兽世界试玩帐号资源站. All Rights Reserved. 本站仅提供账号信息展示服务，与暴雪娱乐公司无关。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
