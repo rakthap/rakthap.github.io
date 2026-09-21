@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>满人姓氏 - 满族传统姓氏溯源与读音指南</title>
+    <meta name="description" content="满人姓氏专题网站，收录清朝八旗满洲姓氏的起源、演变及现代常用汉字写法。提供满汉对音表、读音查询及家族文化介绍，帮助了解满族历史与家族渊源。">
+    <meta name="keywords" content="满人姓氏, 满族姓氏, 满汉对音, 赫舍里, 姓氏起源, 八旗姓氏">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征满族与清朝 */
+            --secondary-color: #D4AF37; /* 鎏金，象征尊贵 */
+            --bg-color: #F9F5F0; /* 米宣纸色 */
+            --text-main: #2C2C2C;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-weight: normal;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #5C0000 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 介绍区域 */
+        .intro {
+            padding: 40px 0;
+            background-color: var(--bg-color);
+        }
+
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .intro-image {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .intro-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .intro-image figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 核心数据 */
+        .stats {
+            background-color: var(--white);
+            padding: 30px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* 姓氏分类与列表 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 0 auto;
+        }
+
+        .categories {
+            padding: 60px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .category-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .category-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .category-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* 热门姓氏 */
+        .featured-names {
+            background-color: #FFF5F5;
+            padding: 60px 0;
+        }
+
+        .name-table-container {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .name-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .name-table th, .name-table td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .name-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 500;
+            width: 25%;
+        }
+
+        .name-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .name-table tr:hover {
+            background-color: #FFFBFB;
+        }
+
+        .hanzi {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .pronunciation {
+            font-family: "KaiTi", "楷体", serif;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 常见问题 FAQ */
+        .faq-section {
+            padding: 60px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--white);
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 200px; /* 近似高度 */
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2C2C2C;
+            color: #999;
+            padding: 40px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+                gap: 10px;
+            }
+            
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .name-table th, .name-table td {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+
+            .name-table th {
+                display: none; /* 移动端隐藏表头，只显示内容 */
+            }
+            
+            .name-table th::before {
+                content: attr(data-label);
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <span>满族姓氏</span> 溯源指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#intro" class="active">姓氏简介</a></li>
+                    <li><a href="#popular">热门姓氏</a></li>
+                    <li><a href="#categories">分类查询</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="container">
+                <h1>满人姓氏</h1>
+                <p>探寻八旗旧梦，解读满汉对音背后的家族记忆与文化传承</p>
+            </div>
+        </section>
+
+        <!-- 介绍区域 -->
+        <section id="intro" class="intro">
+            <div class="container intro-content">
+                <div class="intro-text">
+                    <h2>什么是满人姓氏？</h2>
+                    <p>满人姓氏，即满族的姓氏。在清朝以前，满族先民多以部落、氏族为名，无固定姓氏。入关后，为了便于行政管理，清廷推行“改姓归旗”政策，将原有氏族名称进行满汉对音，逐渐形成了如今我们所熟知的满族姓氏。</p>
+                    <p>满族姓氏数量庞大，据统计有数千个，但经过历史演变，许多古老姓氏已不再使用，或演变为今天的复姓。了解满人姓氏，不仅是追溯家族历史的重要途径，也是研究满族文化、历史变迁及民族融合的宝贵资料。</p>
+                    <p>许多现代汉姓（如佟、关、马、索、富、那、郎、赫、舒、穆、颜、赵）皆源于满族旧姓，它们承载着数百年的历史积淀。</p>
+                </div>
+                <div class="intro-image">
+                    <!-- 使用 picsum 生成一张具有历史感的图片 -->
+                    <img src="https://picsum.photos/seed/manchu_history/600/400" alt="满族历史场景示意图">
+                    <figcaption>满族传统服饰与姓氏牌位</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心数据 -->
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>700+</h3>
+                    <p>常见满族旧姓</p>
+                </div>
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>现代常见汉姓来源</p>
+                </div>
+                <div class="stat-item">
+                    <h3>300+</h3>
+                    <p>清代八旗姓氏</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门姓氏列表 -->
+        <section id="popular" class="featured-names">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见满人姓氏与现代汉姓对照</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="name-table-container">
+                    <table class="name-table">
+                        <thead>
+                            <tr>
+                                <th data-label="旧姓">满族旧姓</th>
+                                <th data-label="满语读音">满语读音</th>
+                                <th data-label="现代汉姓">现代常见汉姓</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="hanzi">爱新觉罗</td>
+                                <td class="pronunciation">Aisin Gioro</td>
+                                <td>艾、赵、罗、金、袁、启、溥</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">佟佳</td>
+                                <td class="pronunciation">Tunggiya</td>
+                                <td>佟、董</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">瓜尔佳</td>
+                                <td class="pronunciation">Gūwalgiya</td>
+                                <td>关、汪、石、白、苏、顾</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">马佳</td>
+                                <td class="pronunciation">Mukdeniya</td>
+                                <td>马、麻</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">索绰罗</td>
+                                <td class="pronunciation">Socoro</td>
+                                <td>索、曹、高</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">富察</td>
+                                <td class="pronunciation">Fucha</td>
+                                <td>富、傅、李、张</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">纳喇</td>
+                                <td class="pronunciation">Nara</td>
+                                <td>那、南、兰、叶</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">赫舍里</td>
+                                <td class="pronunciation">Hešeri</td>
+                                <td>赫、何、高、张、何</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">舒穆禄</td>
+                                <td class="pronunciation">Sumuru</td>
+                                <td>舒、徐、孙</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">觉罗</td>
+                                <td class="pronunciation">Joro</td>
+                                <td>赵、刘、艾</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">完颜</td>
+                                <td class="pronunciation">Wanyan</td>
+                                <td>王、汪、完</td>
+                            </tr>
+                            <tr>
+                                <td class="hanzi">那木图</td>
+                                <td class="pronunciation">Namutu</td>
+                                <td>那、纳</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分类查询 -->
+        <section id="categories" class="categories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>姓氏分类索引</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="icon">👑</div>
+                        <h4>皇室宗亲</h4>
+                        <p>爱新觉罗、觉罗</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="icon">⚔️</div>
+                        <h4>八旗将领</h4>
+                        <p>瓜尔佳、佟佳、纳喇</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="icon">📜</div>
+                        <h4>文臣贵族</h4>
+                        <p>富察、赫舍里、索尼</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="icon">🏹</div>
+                        <h4>武将世家</h4>
+                        <p>索绰罗、舒穆禄、博尔济吉特</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="icon">🏘️</div>
+                        <h4>平民部落</h4>
+                        <p>扎拉、尼玛哈、巴图鲁</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="icon">📖</div>
+                        <h4>文化学者</h4>
+                        <p>库雅拉、索伦</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>关于满人姓氏的常见问题</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">爱新觉罗这个姓氏现在还存在吗？</div>
+                    <div class="faq-answer">
+                        <p>是的，爱新觉罗作为满族大姓，至今仍有族人使用。由于清朝灭亡后，许多爱新觉罗后裔为避免政治影响，曾改姓为“艾”、“赵”、“罗”等。目前，仍有部分家族保留旧姓或使用复姓形式。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何查询自己是否是满族后裔？</div>
+                    <div class="faq-answer">
+                        <p>查询家族谱系是关键。您可以通过查阅家谱、族谱，或咨询当地族谱学会。如果祖先在清朝时期有明确的旗籍记录，通常能追溯到具体的满族旧姓。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">满族姓氏和汉姓是一一对应的吗？</div>
+                    <div class="faq-answer">
+                        <p>不是。一个满族旧姓通常对应多个现代汉姓。例如，著名的“瓜尔佳”氏，在现代就演变成了关、汪、石、白、苏、顾等多个姓氏。反之，有些现代汉姓（如赵）可能由多个不同的满族旧姓演变而来。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">满人姓氏的发音有什么特点？</div>
+                    <div class="faq-answer">
+                        <p>满语属于阿尔泰语系，其发音与汉语有较大差异，多包含喉音、卷舌音及特定的元音组合。例如“赫舍里”读作 Hešeri，发音短促有力。现代汉语拼音主要依据满语罗马拼音转写而来。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>满人姓氏</h4>
+                    <p>致力于普及满族历史文化，提供权威的姓氏溯源与读音查询服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">姓氏简介</a></li>
+                        <li><a href="#popular">热门姓氏表</a></li>
+                        <li><a href="#categories">分类索引</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">八旗制度</a></li>
+                        <li><a href="#">满语学习</a></li>
+                        <li><a href="#">族谱查询</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 满人姓氏溯源指南. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 折叠交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                              </html>
