@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动漫图片女生-唯美二次元美少女精选图库与创作指南</title>
+    <meta name="description" content="本站提供海量精选动漫女生图片资源，涵盖不同风格、背景与角色设定。包含美少女插画欣赏、二次元艺术图鉴、角色设计灵感以及相关绘画技巧与注意事项。">
+    <meta name="keywords" content="动漫图片女生,二次元美少女,动漫插画,动漫壁纸,动漫角色设计">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --text-dark: #2d3436;
+            --text-gray: #636e72;
+            --bg-light: #f9f9fc;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-gray);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 16px 8px 36px;
+            border-radius: 20px;
+            border: 1px solid #dfe6e9;
+            background: #f1f2f6;
+            outline: none;
+            width: 200px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            width: 240px;
+            background: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-gray);
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Filters */
+        .filter-bar {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+        }
+
+        .filter-list {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: var(--text-gray);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 40px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            group: card;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            padding-top: 140%; /* Aspect ratio for portrait */
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: var(--transition);
+            transform: translateY(10px);
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5649c0;
+        }
+
+        .btn-outline {
+            border: 1px solid #dfe6e9;
+            color: var(--text-gray);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Info Section */
+        .info-section {
+            background: white;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .info-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .info-content p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-gray);
+        }
+
+        .check-icon {
+            color: var(--primary-color);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .info-visual {
+            position: relative;
+        }
+
+        .info-visual img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .search-box input {
+                width: 140px;
+            }
+
+            .search-box input:focus {
+                width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                <span>二次元图库</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">唯美少女</a></li>
+                    <li><a href="#">角色设计</a></li>
+                    <li><a href="#">壁纸专区</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" placeholder="搜索角色...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>探索动漫女生的无限魅力</h1>
+                <p>汇集全球优质二次元美少女插画、角色设定与壁纸资源，为您带来极致的视觉享受。</p>
+                <div class="tags">
+                    <span class="tag">清新校园</span>
+                    <span class="tag">魔法奇幻</span>
+                    <span class="tag">机甲战斗</span>
+                    <span class="tag">古风雅韵</span>
+                    <span class="tag">赛博朋克</span>
+                    <span class="tag">治愈系</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-bar">
+            <div class="container">
+                <div class="filter-list">
+                    <button class="filter-btn active">全部</button>
+                    <button class="filter-btn">最新上传</button>
+                    <button class="filter-btn">热门排行</button>
+                    <button class="filter-btn">高人气</button>
+                    <button class="filter-btn">原创作品</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section container">
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://picsum.photos/seed/anime1/400/560" alt="动漫女生插画" class="card-image">
+                        <div class="card-overlay">
+                            <h3 class="card-title">春日物语</h3>
+                            <div class="card-meta">
+                                <span>2023-10-15</span>
+                                <span>•</span>
+                                <span>2.4k 收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title" style="font-size: 1.1rem;">春日物语</h3>
+                        <p class="card-desc">描绘了樱花盛开的季节，少女在林间小道上漫步的温柔瞬间，色彩清新淡雅。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">查看大图</button>
+                            <button class="btn btn-outline">收藏</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://picsum.photos/seed/anime2/400/560" alt="动漫女生角色" class="card-image">
+                        <div class="card-overlay">
+                            <h3 class="card-title">暗夜魔女</h3>
+                            <div class="card-meta">
+                                <span>2023-10-14</span>
+                                <span>•</span>
+                                <span>1.8k 收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title" style="font-size: 1.1rem;">暗夜魔女</h3>
+                        <p class="card-desc">充满神秘色彩的暗黑风格插画，精致的服饰纹理与深邃的眼神刻画。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">查看大图</button>
+                            <button class="btn btn-outline">收藏</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://picsum.photos/seed/anime3/400/560" alt="动漫女生壁纸" class="card-image">
+                        <div class="card-overlay">
+                            <h3 class="card-title">星空守望者</h3>
+                            <div class="card-meta">
+                                <span>2023-10-12</span>
+                                <span>•</span>
+                                <span>5.1k 收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title" style="font-size: 1.1rem;">星空守望者</h3>
+                        <p class="card-desc">适合做手机壁纸的高清二次元角色图，背景是璀璨的银河系。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">查看大图</button>
+                            <button class="btn btn-outline">收藏</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://picsum.photos/seed/anime4/400/560" alt="动漫女生设计" class="card-image">
+                        <div class="card-overlay">
+                            <h3 class="card-title">赛博朋克少女</h3>
+                            <div class="card-meta">
+                                <span>2023-10-10</span>
+                                <span>•</span>
+                                <span>3.2k 收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title" style="font-size: 1.1rem;">赛博朋克少女</h3>
+                        <p class="card-desc">霓虹灯下的未来都市风格，机械义肢与霓虹发色的完美结合。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">查看大图</button>
+                            <button class="btn btn-outline">收藏</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://picsum.photos/seed/anime5/400/560" alt="动漫女生头像" class="card-image">
+                        <div class="card-overlay">
+                            <h3 class="card-title">午后红茶</h3>
+                            <div class="card-meta">
+                                <span>2023-10-09</span>
+                                <span>•</span>
+                                <span>1.5k 收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title" style="font-size: 1.1rem;">午后红茶</h3>
+                        <p class="card-desc">温馨的居家风格，正在享受下午茶的悠闲时光，画面质感细腻。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">查看大图</button>
+                            <button class="btn btn-outline">收藏</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://picsum.photos/seed/anime6/400/560" alt="动漫女生战斗" class="card-image">
+                        <div class="card-overlay">
+                            <h3 class="card-title">烈焰剑舞</h3>
+                            <div class="card-meta">
+                                <span>2023-10-08</span>
+                                <span>•</span>
+                                <span>4.0k 收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title" style="font-size: 1.1rem;">烈焰剑舞</h3>
+                        <p class="card-desc">战斗场景插画，动作流畅，火焰特效逼真，展现角色的英姿。</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">查看大图</button>
+                            <button class="btn btn-outline">收藏</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container info-grid">
+                <div class="info-content">
+                    <h2>寻找你的专属二次元风格</h2>
+                    <p>在这个数字化的时代，动漫女生形象已经超越了单纯的娱乐，成为一种独特的审美符号。无论是作为手机壁纸、头像，还是作为设计师的灵感参考，优质的动漫图片都能带来愉悦的视觉体验。</p>
+                    <ul class="info-list">
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>高清画质：所有图片均为高分辨率设计，适合各种屏幕展示。</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>分类明确：涵盖校园、魔法、古风、科幻等多种热门风格。</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>尊重版权：本站所有资源仅供个人欣赏与学习使用。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info-visual">
+                    <img src="https://picsum.photos/seed/anime_art/600/400" alt="二次元艺术展示">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <p style="color: #b2bec3; font-size: 0.9rem;">致力于为动漫爱好者提供最优质的图片资源与阅读体验，汇聚全球优秀画师作品。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系合作</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>热门分类</h3>
+                    <ul>
+                        <li><a href="#">唯美少女</a></li>
+                        <li><a href="#">机甲战士</a></li>
+                        <li><a href="#">古风人物</a></li>
+                        <li><a href="#">Q版萌宠</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 二次元图库. All Rights Reserved. 仅供学习交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：筛选按钮点击效果
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // 移除所有 active 类
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // 给当前点击的按钮添加 active 类
+                this.classList.add('active');
+                
+                // 这里可以添加实际的筛选逻辑，目前仅做视觉反馈
+                console.log('筛选类别切换至：' + this.innerText);
+            });
+        });
+
+        // 搜索框回车事件
+        const searchInput = document.querySelector('.search-box input');
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value;
+                if(query) {
+                    alert('正在搜索：' + query + ' 的相关动漫图片...');
+                }
+            }
+        });
+    </script>
+</body>
+  </html>
