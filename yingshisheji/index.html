@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="英式设计风格指南：探索维多利亚美学、乡村田园与现代英伦极简主义的融合。提供设计灵感、配色方案、家具选型及装修案例，打造沉稳优雅的家居空间。">
+    <meta name="keywords" content="英式设计风格,英伦装修,维多利亚风格,乡村田园风格,英式极简,家居设计">
+    <title>英式设计风格-经典美学与优雅生活方式的融合指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2C3E50;
+            --accent-color: #8E44AD;
+            --bg-color: #F9F7F2;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #E0E0E0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/englandstyle/1600/900.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #732d91;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Characteristics Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Color Palette */
+        .palette-section {
+            background-color: #fff;
+        }
+
+        .palette-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .color-swatch::before {
+            content: attr(data-color);
+            position: absolute;
+            bottom: -30px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            white-space: nowrap;
+        }
+
+        /* Case Studies */
+        .case-studies {
+            background-color: var(--bg-color);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .case-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .case-image {
+            height: 240px;
+            width: 100%;
+        }
+
+        .case-content {
+            padding: 1.5rem;
+        }
+
+        .case-tag {
+            display: inline-block;
+            background-color: #eee;
+            color: var(--text-light);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .case-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .case-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Tips Section */
+        .tips-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tip-item {
+            background: var(--card-bg);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .tip-item h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .tip-item p {
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-serif);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">英伦<span>格调</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#features">设计特征</a></li>
+                    <li><a href="#palette">色彩搭配</a></li>
+                    <li><a href="#cases">经典案例</a></li>
+                    <li><a href="#tips">布局建议</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>英式设计风格：永恒的优雅与经典</h1>
+                <p>融合维多利亚的华丽与现代英伦的极简，探索如何将沉稳、自然与人文气息融入您的家居空间。</p>
+                <a href="#features" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心设计特征</h2>
+                    <p>英式风格并非一成不变，它既有维多利亚时期的繁复，也有现代的简约，核心在于“自然”与“舒适”。</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>自然材质运用</h3>
+                        <p>大量使用原木、石材、棉麻和亚麻。强调材质的天然纹理，如橡木、胡桃木的温润，以及石材的厚重感。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛋️</div>
+                        <h3>舒适与实用性</h3>
+                        <p>不同于法式的浪漫，英式设计更注重坐感与实用性。家具通常线条圆润，强调人体的舒适度。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🖼️</div>
+                        <h3>经典复古元素</h3>
+                        <p>常包含壁炉、雕花家具、蕾丝窗帘、复古挂画和绿植。通过装饰细节营造浓厚的文化底蕴。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📐</div>
+                        <h3>对称与平衡</h3>
+                        <p>无论是空间布局还是家具摆放，英式风格偏爱严谨的对称结构，给人以稳重、秩序的美感。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette Section -->
+        <section id="palette" class="palette-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>经典色彩搭配</h2>
+                    <p>英式风格擅长运用大地色系与柔和的中性色，营造出温暖、宁静的氛围。</p>
+                </div>
+                <div class="palette-container">
+                    <div class="color-swatch" style="background-color: #8D6E63;" data-color="皮革棕"></div>
+                    <div class="color-swatch" style="background-color: #D7CCC8;" data-color="米白灰"></div>
+                    <div class="color-swatch" style="background-color: #5D4037;" data-color="深咖啡色"></div>
+                    <div class="color-swatch" style="background-color: #A1887F;" data-color="大地色"></div>
+                    <div class="color-swatch" style="background-color: #3E2723;" data-color="墨绿色"></div>
+                    <div class="color-swatch" style="background-color: #ECEFF1;" data-color="奶油白"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="cases" class="case-studies">
+            <div class="container">
+                <div class="section-header">
+                    <h2>风格应用案例</h2>
+                    <p>从乡村别墅到现代公寓，看看英式设计在不同空间中的演绎。</p>
+                </div>
+                <div class="cases-grid">
+                    <article class="case-card">
+                        <img src="https://picsum.photos/seed/livingroom/600/400" alt="英式客厅设计" class="case-image">
+                        <div class="case-content">
+                            <span class="case-tag">客厅</span>
+                            <h3>维多利亚复古客厅</h3>
+                            <p>采用深色实木家具搭配暖黄色灯光，墙纸选用带花纹的复古款式，搭配古典壁炉，尽显贵族气派。</p>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <img src="https://picsum.photos/seed/kitchen/600/400" alt="英式厨房设计" class="case-image">
+                        <div class="case-content">
+                            <span class="case-tag">厨房</span>
+                            <h3>田园风格厨房</h3>
+                            <p>以白色为主调，使用浅色木橱柜，搭配蕾丝桌布和绿植，营造出轻松愉悦的烹饪环境。</p>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <img src="https://picsum.photos/seed/bedroom/600/400" alt="英式卧室设计" class="case-image">
+                        <div class="case-content">
+                            <span class="case-tag">卧室</span>
+                            <h3>舒适英伦卧室</h3>
+                            <p>以大地色系为主，床头使用软包设计，搭配厚重的羊毛地毯和深色窗帘，保证睡眠舒适度。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips">
+            <div class="container">
+                <div class="section-header">
+                    <h2>设计实施建议</h2>
+                    <p>想要打造纯正的英式风格？请遵循以下核心原则。</p>
+                </div>
+                <div class="tips-list">
+                    <div class="tip-item">
+                        <h3>1. 家具选择：注重细节与工艺</h3>
+                        <p>优先选择实木家具，关注雕花、镶嵌等工艺细节。布艺沙发建议选择高支棉麻材质，颜色以低饱和度的莫兰迪色系或大地色为佳。</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>2. 窗帘与布艺：繁复与轻盈并存</h3>
+                        <p>窗帘通常需要双层设计，内层为纱帘，外层为厚重布帘。图案上可以选择碎花、格纹或条纹，增加空间的层次感。</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>3. 灯光设计：暖色调为主</h3>
+                        <p>避免使用冷白光。推荐使用黄铜、铁艺或复古灯具，配合暖色温（2700K-3000K）的灯光，营造温馨氛围。</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>4. 装饰品：画龙点睛之笔</h3>
+                        <p>挂画应选择古典油画或摄影作品，摆放书籍、香薰蜡烛、干花和摆件，让空间充满生活气息。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于英伦格调</h4>
+                    <p style="color: #ccc; font-size: 0.9rem;">致力于分享全球优秀的设计风格与家居美学，为您打造理想生活空间提供灵感与参考。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#features">设计特征</a></li>
+                        <li><a href="#palette">色彩搭配</a></li>
+                        <li><a href="#cases">精选案例</a></li>
+                        <li><a href="#tips">布局建议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关风格</h4>
+                    <ul>
+                        <li><a href="#">北欧极简风格</a></li>
+                        <li><a href="#">法式复古风格</a></li>
+                        <li><a href="#">日式禅意风格</a></li>
+                        <li><a href="#">现代轻奢风格</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 英伦格调设计指南. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
