@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩宝仪歌曲大全，收录韩宝仪经典老歌、怀旧金曲及热门排行榜。提供歌曲试听、歌词下载、专辑介绍及演唱背景，一站式韩宝仪音乐资源平台。">
+    <meta name="keywords" content="韩宝仪,韩宝仪歌曲,韩宝仪老歌,韩宝仪经典歌曲,韩宝仪怀旧金曲">
+    <title>韩宝仪歌曲-经典怀旧金曲在线试听与歌曲大全</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown */
+            --secondary-color: #F4A460; /* SandyBrown */
+            --accent-color: #FFD700; /* Gold */
+            --bg-color: #FFFAF0; /* FloralWhite */
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to bottom, #fff 0%, var(--bg-color) 100%);
+            border-bottom: 2px solid var(--secondary-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+            background: radial-gradient(circle at center, var(--secondary-color) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Search Bar */
+        .search-box {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .search-input {
+            padding: 12px 20px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 25px;
+            width: 300px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .btn-search {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-search:hover {
+            background-color: #6d360f;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        /* Song Grid */
+        .song-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .song-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .song-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .card-cover {
+            height: 160px;
+            background-color: #ddd;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .play-icon:hover {
+            background: var(--primary-color);
+        }
+
+        .card-body {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .song-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .song-artist {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .song-tags {
+            margin-top: auto;
+            display: flex;
+            gap: 5px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            color: var(--text-light);
+        }
+
+        .tag.hot {
+            background-color: #fff0f0;
+            color: #d32f2f;
+        }
+
+        /* Intro Text */
+        .intro-text {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .intro-text h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* Playlist List */
+        .playlist-list {
+            list-style: none;
+        }
+
+        .playlist-item {
+            background: var(--card-bg);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .song-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .song-num {
+            font-weight: bold;
+            color: var(--secondary-color);
+            width: 30px;
+        }
+
+        .song-meta {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .song-name {
+            font-weight: 500;
+        }
+
+        .song-duration {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .btn-play {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-play:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            .btn-search {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                🎵 韩宝仪 <span>歌曲</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#hot">热门金曲</a></li>
+                    <li><a href="#albums">专辑精选</a></li>
+                    <li><a href="#about">关于歌手</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>重温经典，聆听韩宝仪</h1>
+            <p>她是华语乐坛“甜歌皇后”，用清澈的嗓音诠释了一首首脍炙人口的怀旧金曲。在这里，您可以在线试听、查看歌词并收藏您喜爱的韩宝仪歌曲。</p>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="搜索歌曲名称或专辑...">
+                <button class="btn-search">搜索</button>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="about">
+            <h2 class="section-title">关于韩宝仪</h2>
+            <div class="intro-text">
+                <h3>甜歌皇后：韩宝仪</h3>
+                <p>韩宝仪，1965年出生于马来西亚，是华语流行音乐史上最具影响力的歌手之一。她的音乐风格以甜美、轻快、怀旧著称，尤其擅长演绎抒情慢歌和轻快舞曲。自20世纪80年代末出道以来，韩宝仪凭借《粉红色的回忆》、《往事只能回味》、《情网》等经典歌曲，红遍大江南北，成为几代人的青春记忆。她的歌声温暖治愈，无论何时聆听，都能让人感受到那份纯真与美好。</p>
+                <p><strong>音乐特点：</strong>音色纯净、情感细腻、节奏感强，是许多KTV怀旧金曲的首选。</p>
+            </div>
+        </section>
+
+        <!-- Hot Songs Grid -->
+        <section id="hot">
+            <h2 class="section-title">🔥 热门金曲榜</h2>
+            <div class="song-grid">
+                <!-- Song Card 1 -->
+                <article class="song-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/han1/400/300" alt="粉红色的回忆封面">
+                        <div class="play-icon" onclick="playSong('粉红色的回忆')">▶</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="song-title">粉红色的回忆</h3>
+                        <p class="song-artist">韩宝仪</p>
+                        <div class="song-tags">
+                            <span class="tag hot">必听</span>
+                            <span class="tag">经典</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Song Card 2 -->
+                <article class="song-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/han2/400/300" alt="往事只能回味封面">
+                        <div class="play-icon" onclick="playSong('往事只能回味')">▶</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="song-title">往事只能回味</h3>
+                        <p class="song-artist">韩宝仪</p>
+                        <div class="song-tags">
+                            <span class="tag hot">怀旧</span>
+                            <span class="tag">伤感</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Song Card 3 -->
+                <article class="song-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/han3/400/300" alt="情网封面">
+                        <div class="play-icon" onclick="playSong('情网')">▶</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="song-title">情网</h3>
+                        <p class="song-artist">韩宝仪</p>
+                        <div class="song-tags">
+                            <span class="tag">流行</span>
+                            <span class="tag">深情</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Song Card 4 -->
+                <article class="song-card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/han4/400/300" alt="海韵封面">
+                        <div class="play-icon" onclick="playSong('海韵')">▶</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="song-title">海韵</h3>
+                        <p class="song-artist">韩宝仪</p>
+                        <div class="song-tags">
+                            <span class="tag">民谣</span>
+                            <span class="tag">经典</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Playlist Section -->
+        <section id="albums">
+            <h2 class="section-title">💿 专辑精选列表</h2>
+            <div class="intro-text">
+                <p>以下为韩宝仪部分经典专辑曲目列表，方便您快速查找：</p>
+                <ul class="playlist-list">
+                    <li class="playlist-item">
+                        <div class="song-info">
+                            <span class="song-num">01</span>
+                            <div class="song-meta">
+                                <span class="song-name">粉红色的回忆</span>
+                                <span class="song-duration">03:45</span>
+                            </div>
+                        </div>
+                        <button class="btn-play" onclick="playSong('粉红色的回忆')">播放</button>
+                    </li>
+                    <li class="playlist-item">
+                        <div class="song-info">
+                            <span class="song-num">02</span>
+                            <div class="song-meta">
+                                <span class="song-name">往事只能回味</span>
+                                <span class="song-duration">04:12</span>
+                            </div>
+                        </div>
+                        <button class="btn-play" onclick="playSong('往事只能回味')">播放</button>
+                    </li>
+                    <li class="playlist-item">
+                        <div class="song-info">
+                            <span class="song-num">03</span>
+                            <div class="song-meta">
+                                <span class="song-name">情网</span>
+                                <span class="song-duration">03:58</span>
+                            </div>
+                        </div>
+                        <button class="btn-play" onclick="playSong('情网')">播放</button>
+                    </li>
+                    <li class="playlist-item">
+                        <div class="song-info">
+                            <span class="song-num">04</span>
+                            <div class="song-meta">
+                                <span class="song-name">海韵</span>
+                                <span class="song-duration">04:20</span>
+                            </div>
+                        </div>
+                        <button class="btn-play" onclick="playSong('海韵')">播放</button>
+                    </li>
+                    <li class="playlist-item">
+                        <div class="song-info">
+                            <span class="song-num">05</span>
+                            <div class="song-meta">
+                                <span class="song-name">无言的结局</span>
+                                <span class="song-duration">04:05</span>
+                            </div>
+                        </div>
+                        <button class="btn-play" onclick="playSong('无言的结局')">播放</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section>
+            <h2 class="section-title">🎧 听歌小贴士</h2>
+            <div class="intro-text">
+                <p><strong>1. 音质选择：</strong>建议在Wi-Fi环境下使用较高音质播放，以获得最佳听觉体验。</p>
+                <p><strong>2. 播放设备：</strong>韩宝仪的歌曲多为经典老歌，在有线耳机或高品质音响上聆听效果更佳。</p>
+                <p><strong>3. 版权提示：</strong>本站提供歌曲试听服务，请支持正版音乐，购买专辑或通过官方渠道欣赏。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">帮助中心</a>
+            </div>
+            <p>&copy; 2023 韩宝仪歌曲大全. All Rights Reserved. 本站仅供学习交流使用.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的播放交互模拟
+        function playSong(songName) {
+            // 在实际应用中，这里会调用播放器API或跳转到播放页面
+            // 这里仅作UI反馈
+            const btn = event.target;
+            const originalText = btn.innerText;
+            
+            // 模拟按钮状态变化
+            btn.innerText = "正在播放...";
+            btn.style.backgroundColor = "#8B4513";
+            btn.style.color = "white";
+            
+            // 模拟播放结束后的状态重置
+            setTimeout(() => {
+                btn.innerText = "播放";
+                btn.style.backgroundColor = "transparent";
+                btn.style.color = "#8B4513";
+            }, 3000);
+
+            // 控制台输出，便于调试
+            console.log(`正在播放: ${songName}`);
+        }
+    </script>
+</body>
+</html>
