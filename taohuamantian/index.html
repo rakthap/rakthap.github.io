@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="桃花满天红：聚焦中国传统民俗文化、春日赏花指南及桃花主题艺术展示。提供桃花节信息、桃花诗词鉴赏、桃花摄影技巧及相关文化解读。">
+    <meta name="keywords" content="桃花满天红,桃花节,赏花指南,桃花摄影,民俗文化,春日旅游">
+    <title>桃花满天红-民俗赏花指南与春日文化展示</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d64f4f;
+            --secondary-color: #a63a3a;
+            --accent-color: #fce4ec;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #fdfdfd;
+            --bg-section: #fff5f5;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/peachblossom_hero/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--text-dark);
+        }
+
+        /* Culture Intro */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        .intro-image {
+            position: relative;
+        }
+
+        .intro-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Featured Spots */
+        .spots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .card-img {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Poetry Section */
+        .poetry-section {
+            background-color: var(--bg-section);
+        }
+
+        .poetry-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .poem-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .poem-card::before {
+            content: '❝';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 3rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+        }
+
+        .poem-author {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; height: 100%; }
+        .gallery-item:nth-child(2) { grid-column: span 1; }
+        .gallery-item:nth-child(3) { grid-column: span 1; }
+        .gallery-item:nth-child(4) { grid-column: span 1; }
+        .gallery-item:nth-child(5) { grid-column: span 1; }
+        .gallery-item:nth-child(6) { grid-column: span 1; }
+        .gallery-item:nth-child(7) { grid-column: span 1; }
+        .gallery-item:nth-child(8) { grid-column: span 1; }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-container { flex-direction: column; height: auto; padding: 15px 0; }
+            nav ul { margin-top: 15px; gap: 15px; font-size: 0.9rem; }
+            .intro-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+            .gallery-item:nth-child(1) { grid-column: span 2; height: 250px; }
+            .gallery-item:nth-child(n) { height: 150px; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.75rem; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>🌸</span> 桃花满天红
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#culture">文化溯源</a></li>
+                    <li><a href="#spots">赏花胜地</a></li>
+                    <li><a href="#gallery">摄影图集</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#spots" class="cta-button">立即赏花</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>桃花满天红</h1>
+                <p>春风十里，不如赏花一季。探索中国传统春日赏花文化，发现那些被桃花染红的绝美秘境。</p>
+                <div class="hero-buttons">
+                    <a href="#spots" class="btn btn-primary">查看赏花地图</a>
+                    <a href="#culture" class="btn btn-outline">了解文化</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Culture Intro -->
+        <section id="culture" class="section-padding">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <h2>春日里的文化符号</h2>
+                        <p>“桃花满天红”不仅描绘了春日里漫山遍野的盛景，更在中国传统文化中占据着独特的地位。桃花象征着春天、爱情与长寿，是文人墨客笔下永恒的主题。</p>
+                        <p>从《诗经》的“桃之夭夭，灼灼其华”到陶渊明的“桃花源记”，桃花早已超越了植物本身的属性，成为了人们向往美好生活与精神归宿的寄托。每逢三月，各地的桃花节如约而至，吸引了无数游客观赏这满树嫣红。</p>
+                        <p>无论你是摄影爱好者、文学追随者，还是单纯想要亲近自然的旅行者，这里都有属于你的那一抹“桃花满天红”。</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="https://picsum.photos/seed/peach_blossom_culture/600/400.jpg" alt="桃花文化展示" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Spots -->
+        <section id="spots" class="section-padding" style="background-color: var(--bg-section);">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">热门赏花胜地</h2>
+                    <p class="section-subtitle">精选国内最具代表性的桃花观赏地</p>
+                </div>
+                
+                <div class="spots-grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/taohuayuan/400/300.jpg" alt="世外桃源风景区" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">湖南</span>
+                            <h3 class="card-title">世外桃源风景区</h3>
+                            <p class="card-desc">重现陶渊明笔下的理想国，万亩桃林竞相开放，乘船穿行其间，恍若置身仙境。</p>
+                            <div class="card-footer">
+                                <span>⏱ 最佳时间：3月中旬</span>
+                                <span>📍 距离：[参考距离]</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/taohua_mountain/400/300.jpg" alt="平谷桃花海" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">北京</span>
+                            <h3 class="card-title">平谷桃花海</h3>
+                            <p class="card-desc">北京最大的桃花观赏区，漫山遍野的粉红色花海，被誉为“北方小江南”。</p>
+                            <div class="card-footer">
+                                <span>⏱ 最佳时间：4月上旬</span>
+                                <span>📍 距离：[参考距离]</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/taohua_island/400/300.jpg" alt="林芝桃花沟" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">西藏</span>
+                            <h3 class="card-title">林芝桃花沟</h3>
+                            <p class="card-desc">在雪山脚下看桃花，尼洋河畔的粉红与雪山的洁白交相辉映，壮丽非凡。</p>
+                            <div class="card-footer">
+                                <span>⏱ 最佳时间：3月底-4月初</span>
+                                <span>📍 距离：[参考距离]</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poetry Section -->
+        <section class="section-padding poetry-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">桃花诗词鉴赏</h2>
+                    <p class="section-subtitle">穿越千年的浪漫与情怀</p>
+                </div>
+                <div class="poetry-container">
+                    <div class="poem-card">
+                        <h3>《题都城南庄》</h3>
+                        <p>去年今日此门中，人面桃花相映红。<br>人面不知何处去，桃花依旧笑春风。</p>
+                        <p class="poem-author">—— 崔护</p>
+                    </div>
+                    <div class="poem-card">
+                        <h3>《大林寺桃花》</h3>
+                        <p>人间四月芳菲尽，山寺桃花始盛开。<br>长恨春归无觅处，不知转入此中来。</p>
+                        <p class="poem-author">—— 白居易</p>
+                    </div>
+                    <div class="poem-card">
+                        <h3>《赠汪伦》</h3>
+                        <p>李白乘舟将欲行，忽闻岸上踏歌声。<br>桃花潭水深千尺，不及汪伦送我情。</p>
+                        <p class="poem-author">—— 李白</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">桃花摄影图集</h2>
+                    <p class="section-subtitle">捕捉那一瞬间的惊艳绽放</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_flower_macro/800/800.jpg" alt="特写桃花细节">
+                        <div class="gallery-overlay">微距下的花蕊细节</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_girl/400/300.jpg" alt="花间少女">
+                        <div class="gallery-overlay">人面桃花相映红</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_tree_branch/400/300.jpg" alt="枝头春意">
+                        <div class="gallery-overlay">枝头春意闹</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_breeze/400/300.jpg" alt="风吹花落">
+                        <div class="gallery-overlay">风吹花落雨纷纷</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_blossom_fog/400/300.jpg" alt="晨雾桃花">
+                        <div class="gallery-overlay">晨雾中的仙境</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_sky/400/300.jpg" alt="蓝天桃花">
+                        <div class="gallery-overlay">蓝天下的粉海</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_kite/400/300.jpg" alt="风筝与花">
+                        <div class="gallery-overlay">风筝与花共舞</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/peach_sunset/400/300.jpg" alt="夕阳花影">
+                        <div class="gallery-overlay">夕阳下的剪影</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding" style="background-color: var(--bg-section);">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">赏花指南与问答</h2>
+                    <p class="section-subtitle">为您提供实用的赏花建议</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">桃花满天红通常是什么时候？</div>
+                        <div class="faq-answer">通常在3月中旬到4月上旬。具体时间受气候影响，南方稍早，北方稍晚。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">赏花时需要注意什么？</div>
+                        <div class="faq-answer">请爱护花草，不要随意攀折。山区赏花注意防滑，春季温差大，建议携带外套。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何拍摄出“桃花满天红”的效果？</div>
+                        <div class="faq-answer">建议选择清晨或傍晚光线柔和时拍摄，利用大光圈虚化背景，突出花海的整体感。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">除了观赏，桃花还有什么用途？</div>
+                        <div class="faq-answer">桃花可食用（如桃花糕），也可入药，具有活血化瘀的功效。同时桃花也是重要的园林观赏植物。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🌸 桃花满天红</h3>
+                    <p>致力于传播中国传统春日文化，为您提供最全面的赏花指南与摄影技巧。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">赏花地图</a></li>
+                        <li><a href="#">摄影技巧</a></li>
+                        <li><a href="#">诗词鉴赏</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>热门景点</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">林芝桃花沟</a></li>
+                        <li><a href="#">平谷桃花海</a></li>
+                        <li><a href="#">世外桃源</a></li>
+                        <li><a href="#">朱家角古镇</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 桃花满天红文化展示平台. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
