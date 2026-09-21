@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="山中采药指南：探索传统中医药文化，了解中草药识别、采集方法、药用价值及野外安全注意事项。提供常见中草药图鉴与养生知识。">
+    <meta name="keywords" content="山中采药, 中草药, 野外识别, 中医养生, 药材采集">
+    <title>山中采药-传统中草药识别与采集全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --secondary-green: #4a7c43;
+            --earth-brown: #8b5a2b;
+            --bg-color: #f4f7f4;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-green);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: #e8f5e9;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(45, 90, 39, 0.8), rgba(45, 90, 39, 0.6)), url('https://picsum.photos/seed/forest/1600/600') no-repeat center center/cover;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--earth-brown);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #6d4621;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-green);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--earth-brown);
+            margin: 0.5rem auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: #e8f5e9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-green);
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Safety Alert */
+        .alert-box {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .alert-icon {
+            font-size: 1.5rem;
+        }
+
+        .alert-content h3 {
+            color: #e65100;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-content p {
+            color: #5d4037;
+        }
+
+        /* Herb List */
+        .herb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .herb-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .herb-img {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .herb-info {
+            padding: 1.5rem;
+        }
+
+        .herb-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-green);
+        }
+
+        .herb-info .latin {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .herb-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .guide-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (min-width: 768px) {
+            .guide-item {
+                flex-direction: row;
+                height: 200px;
+            }
+        }
+
+        .guide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-width: 200px;
+        }
+
+        .guide-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .guide-content h3 {
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .guide-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-item h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a3316;
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 1rem 1rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-green);
+                padding: 1rem;
+                gap: 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span>🌿</span> 山中采药
+            </div>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#basics">采集基础</a></li>
+                    <li><a href="#identification">识别图鉴</a></li>
+                    <li><a href="#safety">安全须知</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>回归自然，探寻本草智慧</h1>
+            <p>山中采药不仅是获取药材的过程，更是与传统中医文化的深度对话。本指南为您提供专业的野外识别方法、采集技巧及安全防护知识。</p>
+            <div>
+                <a href="#identification" class="btn">查看药草图鉴</a>
+                <a href="#basics" class="btn btn-outline">学习采集方法</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Safety Warning -->
+            <div class="alert-box">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <h3>安全第一：野外作业警示</h3>
+                    <p>进入山林前请务必确认天气情况，穿着长袖长裤，携带急救包。切勿采摘不熟悉的植物，部分有毒植物外观与可食用/药用植物极为相似，误食可能导致严重后果。</p>
+                </div>
+            </div>
+
+            <!-- Feature Grid -->
+            <section id="basics">
+                <div class="section-header">
+                    <h2>山中采药基础</h2>
+                    <p>掌握正确的准备工作与采集原则，是有效利用自然馈赠的前提。</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-box">🎒</div>
+                        <h3>装备准备</h3>
+                        <p>登山鞋、防虫喷雾、砍刀、绳索、地质图以及必要的急救药品是野外生存的必备工具。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">📅</div>
+                        <h3>最佳时节</h3>
+                        <p>一般而言，春采花、夏采叶、秋采果、冬采根。但不同药材对采收季节要求不同，需查阅具体药典。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">🌿</div>
+                        <h3>道地药材</h3>
+                        <p>遵循"道地"原则，即在适宜的生态环境和气候条件下生长的药材，药效往往更佳。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">♻️</div>
+                        <h3>可持续采集</h3>
+                        <p>遵循"采大留小"原则，保护植物种群，避免过度挖掘导致生态失衡。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Identification Section -->
+            <section id="identification">
+                <div class="section-header">
+                    <h2>常见中草药识别</h2>
+                    <p>精选几种在野外较为常见且具有代表性的药用植物，助您快速入门。</p>
+                </div>
+                <div class="herb-grid">
+                    <article class="herb-card">
+                        <img src="https://picsum.photos/seed/ginseng/400/300" alt="人参" class="herb-img">
+                        <div class="herb-info">
+                            <h3>人参</h3>
+                            <span class="latin">Panax ginseng</span>
+                            <p>五加科多年生草本植物。主要生长于海拔数百米的针阔混交林中。根状茎（人参芦）短粗，掌状复叶，夏季开黄绿色小花。</p>
+                            <span class="tag">补气</span>
+                            <span class="tag">大补</span>
+                        </div>
+                    </article>
+                    <article class="herb-card">
+                        <img src="https://picsum.photos/seed/ginger/400/300" alt="生姜" class="herb-img">
+                        <div class="herb-info">
+                            <h3>生姜</h3>
+                            <span class="latin">Zingiber officinale</span>
+                            <p>多年生草本植物。根茎肥厚，扁平，有芳香和辛辣味。叶片披针形，花淡黄色，通常见于田间或庭院栽培。</p>
+                            <span class="tag">解表</span>
+                            <span class="tag">温中止呕</span>
+                        </div>
+                    </article>
+                    <article class="herb-card">
+                        <img src="https://picsum.photos/seed/mint/400/300" alt="薄荷" class="herb-img">
+                        <div class="herb-info">
+                            <h3>薄荷</h3>
+                            <span class="latin">Mentha haplocalyx</span>
+                            <p>唇形科多年生草本。茎直立，方形，多分枝。叶对生，边缘有锯齿。揉搓后有强烈清凉香气。</p>
+                            <span class="tag">疏散风热</span>
+                            <span class="tag">利咽</span>
+                        </div>
+                    </article>
+                    <article class="herb-card">
+                        <img src="https://picsum.photos/seed/chrysanthemum/400/300" alt="菊花" class="herb-img">
+                        <div class="herb-info">
+                            <h3>菊花</h3>
+                            <span class="latin">Chrysanthemum morifolium</span>
+                            <p>多年生草本植物。头状花序，大小、形状因品种而异，呈显着的花瓣状。秋季开放，具有独特香气。</p>
+                            <span class="tag">清肝明目</span>
+                            <span class="tag">平肝阳</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Detailed Guide -->
+            <section id="guide">
+                <div class="section-header">
+                    <h2>采集与炮制指南</h2>
+                    <p>从山林到药箱，了解如何正确处理采集回来的药材。</p>
+                </div>
+                <div class="guide-list">
+                    <article class="guide-item">
+                        <img src="https://picsum.photos/seed/collecting/600/400" alt="挖掘药材" class="guide-img">
+                        <div class="guide-content">
+                            <h3>挖掘技巧</h3>
+                            <p>对于根茎类药材（如人参、黄芪），挖掘时应顺根生长方向，避免断裂。对于全草类，应在植株生长旺盛期（含苞待放或盛花期）收割，此时药用成分含量最高。</p>
+                            <a href="#" style="color: var(--primary-green); font-weight: bold;">阅读全文 →</a>
+                        </div>
+                    </article>
+                    <article class="guide-item">
+                        <img src="https://picsum.photos/seed/drying/600/400" alt="药材晾晒" class="guide-img">
+                        <div class="guide-content">
+                            <h3>清洗与晾晒</h3>
+                            <p>采回的药材应尽快清洗泥土。清洗后需摊开晾晒，避免暴晒过度导致有效成分流失。对于含水量高的药材（如天麻、贝母），应置于阴凉通风处阴干。</p>
+                            <a href="#" style="color: var(--primary-green); font-weight: bold;">阅读全文 →</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>野外如何辨别有毒植物？</h4>
+                        <p>最安全的方法是携带专业的植物识别图鉴或向当地老农请教。特别注意那些具有刺激性气味、汁液乳白色或具有明显毒性特征的植物。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>采药是否需要办理手续？</h4>
+                        <p>在自然保护区、森林公园或国有林场内进行大规模采集，通常需要向林业部门申请采集许可证。个人少量采集自用通常不在此列，但需遵守当地规定。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>哪些人不宜进行山中采药？</h4>
+                        <p>患有严重心脑血管疾病、低血糖、高血压及体质极度虚弱者，不建议独自进入深山采药，以免发生意外无法及时救援。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>采集回来的药材如何保存？</h4>
+                        <p>干燥后的药材应装入密封容器，置于干燥、阴凉、通风处保存，防止受潮发霉和虫蛀。部分贵重药材（如虫草）甚至需要放入冰箱冷藏。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于山中采药</h4>
+                <p>我们致力于推广传统中医药文化，普及科学采药知识，倡导人与自然和谐共生的可持续发展理念。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">药材分类</a></li>
+                    <li><a href="#">采集工具</a></li>
+                    <li><a href="#">安全手册</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>法律声明</h4>
+                <ul>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">使用条款</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 山中采药指南. 保留所有权利. 本站内容仅供科普参考，不构成医疗建议。</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('nav-list').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
